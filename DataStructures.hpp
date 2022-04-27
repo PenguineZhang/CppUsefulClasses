@@ -1,3 +1,5 @@
+#include <vector>
+
 class Trie
 {
     public:
@@ -5,9 +7,21 @@ class Trie
         ~Trie();
 };
 
-class UnionFind
+template <typename T>
+class DisjointSet
 {
     public:
-        UnionFind();
-        ~UnionFind();
+        DisjointSet();
+        ~DisjointSet();
+        T Find(T);
+        void Union();
+
+        struct Node{
+            T val;
+            T* parent;
+        };
+
+    private:
+        std::vector<int> ranks;
+        std::vector<T> parents;
 };

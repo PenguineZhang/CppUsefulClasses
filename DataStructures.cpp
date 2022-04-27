@@ -12,12 +12,20 @@ Trie::~Trie()
 }
 
 /*******************   Union Find   *******************/
-UnionFind::UnionFind()
+template <typename T>
+DisjointSet<T>::DisjointSet()
 {
 
 }
 
-UnionFind::~UnionFind()
+template <typename T>
+DisjointSet<T>::~DisjointSet()
+{
+
+}
+
+template <typename T>
+T DisjointSet<T>::Find(T)
 {
 
 }
